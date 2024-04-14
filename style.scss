@@ -119,15 +119,18 @@ body {
             font-weight: 400;
             letter-spacing: 0.025em;
             border-style: solid;
-            padding: 0px 13px 0px 13px;
+            padding: 2px 9px 2px 19px;
             font-size: 15px;
             line-height: 32px;
-
         }
 
         &__btn:hover {
             background-color: #ffffff;
             color: $mainColor;
+        }
+
+        &__btn:hover &_svg {
+            fill: $mainColor;
         }
     }
 }
@@ -170,8 +173,10 @@ body {
     display: flex;
     justify-content: center;
     height: 51px;
+    align-items: center;
+    border-top: 1px solid #e8e8e8;
 
-    &__form {
+    &__box {
         display: flex;
         width: 680px;
         flex-direction: row;
@@ -185,13 +190,103 @@ body {
             font-weight: 700;
             text-transform: uppercase;
             color: #222222;
+            text-decoration: none;
+            
+            &:hover {
+                color: $mainColor;
+            }
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        position: relative;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        &:hover .mega__item {
+            display: block;
+        }
+    }
+}
+
+.mega {
+    &__box {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        border-radius: 5px;
+        border: 1px solid #e8e8e8;
+        top: 47px;
+        left: -24px;
+    }
+
+    &__item {
+        width: 235px;
+        display: none;
+        background-color: #fff;
+        padding-bottom: 12px;
+    }
+
+    &__last {
+        left: -400px;
+    }
+
+    &__title {
+        font-size: 14px;
+        line-height: 32px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+        color: #232323;
+        margin-top: 21px;
+        margin-left: 25px;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            position: absolute;
+            transform: rotate(45deg);
+            border-top: 1px solid #e8e8e8;
+            border-left: 1px solid #e8e8e8;
+            top: -9px;
+            left: 32px;
+        }
+
+        &_last::before {
+            top: -9px;
+            left: 402px;
+        }
+    }
+
+    &__line {
+        margin-left: 25px;
+        height: 1px;
+        background-color: #e8e8e8;
+        margin-bottom: 12px;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 28px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #646464;
+        margin-left: 25px;
+
+        &:hover {
+            color: $mainColor;
         }
     }
 }
 
 .brend {
     background-image: url(./img/header/top_brend_man.jpg);
-    background-size: cover;
     background-position: bottom;
     height: 614px;
     margin-bottom: 98px;
@@ -446,10 +541,11 @@ body {
     }
 
     &__img {
-        background-image: url(./img/middle/main_girl_snow.jpg);
+        background-image: url(./img/middle/girl_snow.png);
         background-size: cover;
         width: 767px;
         height: 529px;
+
     }
 
     &__sale {
@@ -549,38 +645,34 @@ body {
 
     &__subscribe {
         height: 438px;
-        width: 100%;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
     }
 
     &__girl {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+
+        margin-right: 148px;
         color: #FBFBFB;
-        width: 360px;
-        padding-top: 64px;
-        margin-bottom: 78px;
+        width: 386px;
+        padding-top: 123px;
     }
 
     &__img {
         width: 83px;
         height: 83px;
-        margin-bottom: 30px;
+        margin-top: 111px;
+        margin-right: 28px;
     }
 
     &__text-h3 {
-        padding-top: 12px;
         font-weight: 400;
         font-size: 16px;
         line-height: 26px;
         font-style: italic;
         letter-spacing: 0.025em;
         color: $mainTextColor;
+        margin-bottom: 19px;
     }
 
     &__block {
@@ -604,6 +696,7 @@ body {
         line-height: 14px;
         font-weight: 300;
         color: $mainTextColor;
+        margin-bottom: 41px;
     }
 
     &__lines {
@@ -626,26 +719,29 @@ body {
 }
 
 .subscribe {
-    width: 356px;
 
     &__block {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 32px;
-        gap: 10px;
+        gap: 4px;
+        margin-top: 148px;
     }
 
     &__text-h3 {
+        color: $mainTextColor;
         font-size: 24px;
-        color: #222224;
-        font-weight: 700;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
     }
 
     &__text-h4 {
-        font-size: 18px;
-        color: #222224;
-        font-weight: 400;
+        color: $mainTextColor;
+        font-size: 14px;
+        line-height: 24px;
+        text-transform: none;
     }
 
     &__form {
@@ -653,27 +749,41 @@ body {
     }
 
     &__input {
-        height: 49px;
+        height: 46px;
         background-color: #E1E1E1;
         border: none;
         border-top-left-radius: 24px;
         border-bottom-left-radius: 24px;
-        width: 256px;
+        width: 282px;
         text-align: center;
-        padding-left: 15px;
+        font-size: 14px;
+        line-height: 54px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: $mainTextColor;
+
+        &:hover {
+            background-color: #fff;
+        }
     }
 
     &__btn {
-        height: 49px;
+        height: 46px;
         background-color: #F16D7F;
         border: none;
         border-top-right-radius: 24px;
         border-bottom-right-radius: 24px;
-        width: 100px;
+        width: 104px;
         font-weight: 400;
         font-size: 14px;
         text-align: center;
         color: #fff;
+    }
+
+    &__btn:hover {
+        background-color: #ffffff;
+        color: $mainColor;
+        border: 1px solid $mainColor;
     }
 }
 
@@ -753,6 +863,11 @@ body {
         letter-spacing: 0.025em;
         color: $buttomColor;
         text-decoration: none;
+
+        &:hover {
+            color: $mainColor;
+            transform: scale(1.1);
+        }
     }
 }
 
@@ -775,6 +890,7 @@ body {
     letter-spacing: 0.025em;
     color: $footerColor;
 }
+
 .foot_logo {
     display: flex;
     flex-direction: row;
@@ -782,14 +898,13 @@ body {
     align-items: center;
     gap: 8px;
 }
+
 .div_logo {
     display: flex;
     width: 32px;
     height: 32px;
     background-color: white;
     text-align: center;
-    justify-items: center;
-    align-items: center;
     flex-direction: column;
     justify-content: center;
 }
