@@ -308,12 +308,31 @@ body {
         color: $mainColor;
     }
 
-    &__bc {
-        font-size: 14px;
-        line-height: 20px;
+    &__ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+    &__li:not(:last-child)::after {
+        content: '/';
+        padding-left: 4px;
+        padding-right: 4px;
         font-weight: 300;
-        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 17px;
+        color: black;
+    }
+
+    &__link {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
         color: #636363;
+        text-decoration: none;
+    }
+
+    &__li:last-child &__link {
+        font-weight: 700;
     }
 
     &__clr {
@@ -332,6 +351,11 @@ body {
         font-weight: 700;
         text-transform: uppercase;
         color: $mainTextColor;
+        cursor: pointer;
+
+        &:hover {
+            color: $mainColor;
+        }
     }
 
     &__box {
@@ -356,7 +380,7 @@ body {
         font-weight: 400;
         text-transform: uppercase;
         color: #222222;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     &__h4 {
@@ -364,6 +388,7 @@ body {
         line-height: 20px;
         font-weight: 400;
         color: #222222;
+        margin-bottom: 16px;
     }
 
     &__p {
@@ -378,6 +403,14 @@ body {
         }
     }
 
+    &__p1 {
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #b3b2b2;
+        margin-bottom: 15px;
+    }
+
     &__radio {
         font-size: 12px;
         line-height: 1.2;
@@ -385,37 +418,39 @@ body {
         text-transform: uppercase;
         color: #222222;
     }
+
     &__radio p {
         text-transform: none;
     }
+
+    &__radio &__btn {
+        margin-top: 34px;
+    }
+
     &__chk {
         width: 14px;
         height: 14px;
+        margin-bottom: 10px;
     }
 
     &__chk2 {
         width: 14px;
         height: 14px;
+        margin-bottom: 33px;
     }
 
     &__input {
         width: 390px;
         height: 45px;
         border: 1px solid #eaeaea;
-    }
-
-    &__input2 {
-        width: 390px;
-        height: 45px;
-        border: 1px solid #eaeaea;
-    }
-
-    &__input {
         margin-bottom: 20px;
     }
 
     &__input2 {
-        margin-bottom: 33px;
+        width: 390px;
+        height: 45px;
+        border: 1px solid #eaeaea;
+        margin-bottom: 22px;
     }
 
     &__span {
@@ -423,6 +458,14 @@ body {
         line-height: 20px;
         font-weight: 400;
         color: #ff0d0d;
+    }
+
+    &__span1 {
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #ff0d0d;
+        margin-bottom: 32px;
     }
 
     &__btn {
@@ -435,6 +478,18 @@ body {
         height: 50px;
         background: none;
         border: 1px solid #eaeaea;
+        margin-bottom: 48px;
+        cursor: pointer;
+        &:hover {
+            border: 1px solid #4a4a4a;
+            color: $mainColor;
+            box-shadow: 0 0 10px 0 #4a4a4a;
+        }
+        &:active {
+            background: $mainColor;
+            border: 1px solid #eaeaea;
+            color: #eaeaea;
+        }
     }
 
     &__link {
@@ -443,6 +498,7 @@ body {
         font-weight: 400;
         color: #222222;
         text-decoration: none;
+        margin-left: 32px;
     }
 
     &__line {
@@ -452,6 +508,10 @@ body {
         height: 1px;
         background-color: #e8e8e8;
     }
+}
+
+input:checked {
+    border: 1px solid black;
 }
 
 summary::marker {
