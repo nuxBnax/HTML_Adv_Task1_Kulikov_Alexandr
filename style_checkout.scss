@@ -141,6 +141,11 @@ body {
         align-items: center;
     }
 
+    &__link {
+        display: block;
+        text-decoration: none;
+    }
+
     &__logo {
         display: flex;
         gap: 13px;
@@ -480,11 +485,13 @@ body {
         border: 1px solid #eaeaea;
         margin-bottom: 48px;
         cursor: pointer;
+
         &:hover {
             border: 1px solid #4a4a4a;
             color: $mainColor;
             box-shadow: 0 0 10px 0 #4a4a4a;
         }
+
         &:active {
             background: $mainColor;
             border: 1px solid #eaeaea;

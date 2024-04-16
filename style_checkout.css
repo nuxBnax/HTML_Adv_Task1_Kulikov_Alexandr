@@ -121,6 +121,10 @@ body {
   display: flex;
   align-items: center;
 }
+.brend-logo__link {
+  display: block;
+  text-decoration: none;
+}
 .brend-logo__logo {
   display: flex;
   gap: 13px;
