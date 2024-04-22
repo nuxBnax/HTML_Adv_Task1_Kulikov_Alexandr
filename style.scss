@@ -1,4 +1,8 @@
 @import 'vars';
+@import 'single';
+@import 'checkout';
+@import 'shopping';
+@import 'product';
 
 * {
     margin: 0;
@@ -133,15 +137,21 @@ body {
         }
     }
 }
+
 .header__basket:hover .basketbutton-box {
     display: flex;
 }
+
 .header__basket {
     position: relative;
 
     & a {
         text-decoration: none;
     }
+}
+
+.fa-caret-down {
+    color: #a4a4a4;
 }
 
 .basketbutton-box {
@@ -154,7 +164,7 @@ body {
     height: 440px;
     border-radius: 5px;
     padding-top: 21px;
-    
+
 }
 
 .box {
@@ -236,12 +246,14 @@ body {
         align-content: center;
         text-align: center;
         margin-bottom: 11px;
+
         &_clr {
-            color: #4a4a4a;;
+            color: #4a4a4a;
+            ;
             border: 1px solid #eaeaea;
-        } 
+        }
     }
-    
+
 }
 
 .brend-logo {
@@ -373,6 +385,113 @@ body {
             border-left: 1px solid #e8e8e8;
             top: -9px;
             left: 32px;
+        }
+
+        &_last::before {
+            top: -9px;
+            left: 402px;
+        }
+    }
+
+    &__line {
+        margin-left: 25px;
+        height: 1px;
+        background-color: #e8e8e8;
+        margin-bottom: 12px;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 28px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #646464;
+        margin-left: 25px;
+
+        &:hover {
+            color: $mainColor;
+        }
+    }
+}
+
+.mini {
+    &__menu {
+        align-content: center;
+        justify-content: center;
+        background-image: linear-gradient(180.0deg, #f9f9f9 0%, #f5f5f5 100%);
+        cursor: pointer;
+
+        &:hover {
+            background-image: none;   
+        }
+
+        &:hover .fa-caret-down {
+            color: $mainColor;
+        }
+    }
+
+    &__search {
+        position: relative;
+    }
+
+    &__search__btn {
+        width: 87px;
+        border: none;
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+        color: #222222;
+        &:hover {
+            color: $mainColor;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        border-radius: 5px;
+        border: 1px solid #e8e8e8;
+        top: 47px;
+        left: -24px;
+        z-index: 1;
+    }
+
+    &__item {
+        width: 235px;
+        display: block;
+        background-color: #fff;
+        padding-bottom: 12px;
+    }
+
+    &__last {
+        left: -400px;
+    }
+
+    &__title {
+        font-size: 14px;
+        line-height: 32px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+        color: #232323;
+        margin-top: 21px;
+        margin-left: 25px;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            position: absolute;
+            transform: rotate(45deg);
+            border-top: 1px solid #e8e8e8;
+            border-left: 1px solid #e8e8e8;
+            top: -9px;
+            left: 59px;
         }
 
         &_last::before {
@@ -649,6 +768,7 @@ body {
         line-height: 32px;
         height: 48px;
         width: 212px;
+        cursor: pointer;
     }
 
     &__btn:hover {
@@ -779,7 +899,6 @@ body {
     &__girl {
         display: flex;
         flex-direction: column;
-
         margin-right: 148px;
         color: #FBFBFB;
         width: 386px;
@@ -807,6 +926,48 @@ body {
         display: flex;
         flex-direction: column;
 
+    }
+
+    &__box {
+        height: 79px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__text-h2 {
+        font-size: 16px;
+        line-height: 42px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: $footerColor;
+    }
+
+    &__logo-box {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__logo {
+        display: flex;
+        width: 32px;
+        height: 32px;
+        background-color: white;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+
+        &:hover {
+            background-color: #F16D7F;
+        }
+
+        &:hover .icon {
+            fill: white;
+        }
     }
 }
 
@@ -1001,48 +1162,4 @@ body {
 
 .bgc-footer {
     background-color: #e6e6e6;
-}
-
-.footer {
-    &__box {
-        height: 79px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__text-h2 {
-        font-size: 16px;
-        line-height: 42px;
-        font-weight: 400;
-        letter-spacing: 0.025em;
-        color: $footerColor;
-    }
-
-    &__logo-box {
-        display: flex;
-        flex-direction: row;
-        justify-items: center;
-        align-items: center;
-        gap: 8px;
-    }
-
-    &__logo {
-        display: flex;
-        width: 32px;
-        height: 32px;
-        background-color: white;
-        text-align: center;
-        flex-direction: column;
-        justify-content: center;
-
-        &:hover {
-            background-color: #F16D7F;
-        }
-
-        &:hover .icon {
-            fill: white;
-        }
-    }
 }

@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0e0ecee46a.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style_checkout.css">
+    <link rel="stylesheet" href="style.css">
     <title>Checkout</title>
 </head>
 
@@ -28,9 +29,41 @@
                     </div>
                 </a>
                 <div class="header__search">
-                    <button class="header__search__btn">Browse
-                        <img src="./img/header/header_arrow.jpg" alt="arrow">
-                    </button>
+                    <div class="mini__menu">
+                        <details class="mini__search">
+                            <summary class="mini__search__btn">Browse
+                                <i class="fa-solid fa-caret-down"></i>
+                            </summary>
+                            <div class="mini__box">
+                                <div class="mini__item">
+                                    <h3 class="mini__title">Women</h3>
+                                    <div class="mini__line"></div>
+                                    <a href="" class="mini__link">Dresses</a>
+                                    <a href="" class="mini__link">Tops</a>
+                                    <a href="" class="mini__link">Sweaters/Knits</a>
+                                    <a href="" class="mini__link">Jackets/Coats</a>
+                                    <a href="" class="mini__link">Blazers</a>
+                                    <a href="" class="mini__link">Denim</a>
+                                    <a href="" class="mini__link">Leggings/Pants</a>
+                                    <a href="" class="mini__link">Skirts/Shorts</a>
+                                    <a href="" class="mini__link">Accessories</a>
+                                </div>
+                                <div class="mini__item">
+                                    <h3 class="mini__title">Man</h3>
+                                    <div class="mini__line"></div>
+                                    <a href="" class="mini__link">Dresses</a>
+                                    <a href="" class="mini__link">Tops</a>
+                                    <a href="" class="mini__link">Sweaters/Knits</a>
+                                    <a href="" class="mini__link">Jackets/Coats</a>
+                                    <a href="" class="mini__link">Blazers</a>
+                                    <a href="" class="mini__link">Denim</a>
+                                    <a href="" class="mini__link">Leggings/Pants</a>
+                                    <a href="" class="mini__link">Skirts/Shorts</a>
+                                    <a href="" class="mini__link">Accessories</a>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
                     <form class="header__search__form" action="">
                         <input class="header__search__input" type="text" placeholder="Search for Item...">
                         <button class="header__search__btn2"><img src="./img/header/magnifier.png"
@@ -39,7 +72,41 @@
                 </div>
             </div>
             <div class="header__basketbutton">
-                <img class="header__basketbutton_basket" src="./img/header/basket.svg" alt="basket">
+                <div class="header__basket">
+                    <img class="header__basketbutton_basket" src="./img/header/basket.svg" alt="basket">
+                    <div class="basketbutton-box">
+                        <a class="box__link" href="./single.html">
+                            <div class="box__product">
+                                <img class="box__img" src="./img/header/header_box_man.jpg" alt="">
+                                <div class="box__mini">
+                                    <h4 class="box__product__name">Rebox Zane</h4>
+                                    <img src="./img/header/header_box_stars.jpg" alt="">
+                                    <h4 class="box__name__quantity">1 x $250</h4>
+                                </div>
+                                <img class="box__img2" src="./img/header/header_box_close.png" alt="close">
+                            </div>
+                        </a>
+                        <div class="box__line"></div>
+                        <a class="box__link" href="./single.html">
+                            <div class="box__product">
+                                <img class="box__img" src="./img/header/header_box_girl.jpg" alt="">
+                                <div class="box__mini">
+                                    <h4 class="box__product__name">Rebox Zane</h4>
+                                    <img src="./img/header/header_box_stars.jpg" alt="">
+                                    <h4 class="box__name__quantity">1 x $250</h4>
+                                </div>
+                                <img class="box__img2" src="./img/header/header_box_close.png" alt="close">
+                            </div>
+                        </a>
+                        <div class="box__line"></div>
+                        <div class="box__total">
+                            <h2 class="box__text-h2">TOTAL</h2>
+                            <h2 class="box__text-h2">$500.00</h2>
+                        </div>
+                        <a class="box__link-btn" href="./checkout.html" class="box__link">Checkout</a> 
+                        <a class="box__link-btn box__link-btn_clr" href="33333333" class="box__link2">Go to cart</a>
+                    </div>
+                </div>
                 <form action="">
                     <button class="header__basketbutton__btn">My Account
                         <?xml version="1.0" encoding="iso-8859-1"?>
@@ -334,68 +401,68 @@
         </section>
     </section>
     <section class="container-low">
-        <div class="content">
+        <div class="cont">
             <details open>
-                <summary class="content__title">01. Shipping Adress</summary>
-                <div class="content__box">
-                    <div class="content__check">
-                        <h3 class="content__h3">Check as a guest or register</h3>
-                        <p class="content__p">Register with us for future convenience</p>
-                        <form class="content__radio" action="">
-                            <input class="content__chk" type="radio"> checkout as guest <br>
-                            <input class="content__chk2" type="radio"> register
-                            <h3 class="content__h3">register and save time!</h3>
-                            <p class="content__p">Register with us for future convenience</p>
-                            <div class="content__p-box">
-                                <p class="content__p1">
+                <summary class="cont__title">01. Shipping Adress</summary>
+                <div class="cont__box">
+                    <div class="cont__check">
+                        <h3 class="cont__h3">Check as a guest or register</h3>
+                        <p class="cont__p">Register with us for future convenience</p>
+                        <form class="cont__radio" action="">
+                            <input class="cont__chk" type="radio"> checkout as guest <br>
+                            <input class="cont__chk2" type="radio"> register
+                            <h3 class="cont__h3">register and save time!</h3>
+                            <p class="cont__p">Register with us for future convenience</p>
+                            <div class="cont__p-box">
+                                <p class="cont__p1">
                                     <img src="./img/content/arrows_right.png" alt="">
                                     Fast and easy checkout
                                 </p>
-                                <p class="content__p1">
+                                <p class="cont__p1">
                                     <img src="./img/content/arrows_right.png" alt="">
                                     Easy access to your order history and status
                                 </p>
                             </div>
-                            <button class="content__btn">Continue</button>
+                            <button class="cont__btn">Continue</button>
                         </form>
                     </div>
-                    <div class="content__already">
-                        <h3 class="content__h3">Already registed?</h3>
-                        <p class="content__p">Please log in below</p>
+                    <div class="cont__already">
+                        <h3 class="cont__h3">Already registed?</h3>
+                        <p class="cont__p">Please log in below</p>
                         <form action="">
-                            <h4 class="content__h4">EMAIL ADDRESS<span class="content__span">*</span></h4>
-                            <input class="content__input" type="email">
-                            <h4 class="content__h4">PASSWORD<span class="content__span"> *</span></h4>
-                            <input class="content__input2" type="password">
-                            <p class="content__span1">* Required Fileds</p>
-                            <button class="content__btn">Log in</button>
-                            <a href="" class="content__link">Forgot Password ?</a>
+                            <h4 class="cont__h4">EMAIL ADDRESS<span class="cont__span">*</span></h4>
+                            <input class="cont__input" type="email">
+                            <h4 class="cont__h4">PASSWORD<span class="cont__span"> *</span></h4>
+                            <input class="cont__input2" type="password">
+                            <p class="cont__span1">* Required Fileds</p>
+                            <button class="cont__btn">Log in</button>
+                            <a href="" class="cont__link">Forgot Password ?</a>
                         </form>
 
                     </div>
                 </div>
             </details>
-            <div class="content__line"></div>
+            <div class="cont__line"></div>
             <details>
-                <summary class="content__title">02. BILLING INFORMATION</summary>
+                <summary class="cont__title">02. BILLING INFORMATION</summary>
             </details>
-            <div class="content__line"></div>
+            <div class="cont__line"></div>
             <details>
-                <summary class="content__title">03. SHIPPING INFORMATION</summary>
+                <summary class="cont__title">03. SHIPPING INFORMATION</summary>
             </details>
-            <div class="content__line"></div>
+            <div class="cont__line"></div>
             <details>
-                <summary class="content__title">04. SHIPPING METHOD</summary>
+                <summary class="cont__title">04. SHIPPING METHOD</summary>
             </details>
-            <div class="content__line"></div>
+            <div class="cont__line"></div>
             <details>
-                <summary class="content__title">05. PAYMENT METHOD</summary>
+                <summary class="cont__title">05. PAYMENT METHOD</summary>
             </details>
-            <div class="content__line"></div>
+            <div class="cont__line"></div>
             <details>
-                <summary class="content__title">06. ORDER REVIEW</summary>
+                <summary class="cont__title">06. ORDER REVIEW</summary>
             </details>
-            <div class="content__line"></div>
+            <div class="cont__line"></div>
         </div>
     </section>
     <section class="container bg-image">

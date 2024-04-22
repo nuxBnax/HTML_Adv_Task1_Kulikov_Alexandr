@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0e0ecee46a.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -28,9 +29,42 @@
                     </div>
                 </a>
                 <div class="header__search">
-                    <button class="header__search__btn">Browse
-                        <img src="./img/header/header_arrow.jpg" alt="arrow">
-                    </button>
+                    <div class="mini__menu">
+                        <details class="mini__search">
+                            <summary class="mini__search__btn">Browse
+                                <i class="fa-solid fa-caret-down"></i>
+                            </summary>
+                            <div class="mini__box">
+                                <div class="mini__item">
+                                    <h3 class="mini__title">Women</h3>
+                                    <div class="mini__line"></div>
+                                    <a href="" class="mini__link">Dresses</a>
+                                    <a href="" class="mini__link">Tops</a>
+                                    <a href="" class="mini__link">Sweaters/Knits</a>
+                                    <a href="" class="mini__link">Jackets/Coats</a>
+                                    <a href="" class="mini__link">Blazers</a>
+                                    <a href="" class="mini__link">Denim</a>
+                                    <a href="" class="mini__link">Leggings/Pants</a>
+                                    <a href="" class="mini__link">Skirts/Shorts</a>
+                                    <a href="" class="mini__link">Accessories</a>
+                                </div>
+                                <div class="mini__item">
+                                    <h3 class="mini__title">Man</h3>
+                                    <div class="mini__line"></div>
+                                    <a href="" class="mini__link">Dresses</a>
+                                    <a href="" class="mini__link">Tops</a>
+                                    <a href="" class="mini__link">Sweaters/Knits</a>
+                                    <a href="" class="mini__link">Jackets/Coats</a>
+                                    <a href="" class="mini__link">Blazers</a>
+                                    <a href="" class="mini__link">Denim</a>
+                                    <a href="" class="mini__link">Leggings/Pants</a>
+                                    <a href="" class="mini__link">Skirts/Shorts</a>
+                                    <a href="" class="mini__link">Accessories</a>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                    <!-- ----------------Выпадающее мини-меню------------------------- -->
                     <form class="header__search__form" action="">
                         <input class="header__search__input" type="text" placeholder="Search for Item...">
                         <button class="header__search__btn2"><img src="./img/header/magnifier.png"
@@ -70,7 +104,7 @@
                             <h2 class="box__text-h2">TOTAL</h2>
                             <h2 class="box__text-h2">$500.00</h2>
                         </div>
-                        <a class="box__link-btn" href="./checkout.html" class="box__link">Checkout</a> 
+                        <a class="box__link-btn" href="./checkout.html" class="box__link">Checkout</a>
                         <a class="box__link-btn box__link-btn_clr" href="33333333" class="box__link2">Go to cart</a>
                     </div>
                 </div>
@@ -557,9 +591,8 @@
             </div>
         </section>
         <div class="middle">
-            <form class="middle__form" action="">
-                <button class="middle__btn">Browse All Product <img src="./img/middle/arrow_right.png"
-                        alt="arrow"></button>
+            <form class="middle__form" action="./product.html">
+                <button class="middle__btn">Browse All Product <i class="fa-solid fa-right-long"></i></button>
             </form>
             <section class="middle__offer">
                 <div class="middle__img">
