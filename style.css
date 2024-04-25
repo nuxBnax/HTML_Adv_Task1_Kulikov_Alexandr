@@ -24,6 +24,13 @@ summary::marker {
   height: 47px;
   background-color: rgba(42, 42, 42, 0.14);
 }
+.product__arrow-lf:hover {
+  background-color: #222;
+  cursor: pointer;
+}
+.product__arrow-lf:hover .product__svg-lf {
+  fill: #f16d7f;
+}
 .product__svg-lf {
   margin-left: 17px;
 }
@@ -32,6 +39,13 @@ summary::marker {
   width: 47px;
   height: 47px;
   background-color: rgba(42, 42, 42, 0.14);
+}
+.product__arrow-rt:hover {
+  background-color: #222;
+  cursor: pointer;
+}
+.product__arrow-rt:hover .product__svg-rt {
+  fill: #f16d7f;
 }
 .product__svg-rt {
   margin-left: 12px;
@@ -104,6 +118,10 @@ summary::marker {
 .collection__text {
   color: #2f2f2f;
   margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #2f2f2f;
 }
 .collection__price {
   font-size: 24px;
@@ -121,7 +139,7 @@ summary::marker {
   margin-top: 63px;
   margin-bottom: 28px;
   display: flex;
-  gap: 53px;
+  justify-content: space-between;
 }
 .collection__summary {
   width: 144px;
@@ -134,10 +152,101 @@ summary::marker {
   color: #bcbcbc;
 }
 .collection__input {
-  width: 144px;
+  width: 133px;
   height: 35px;
   background-color: #ffffff;
   border: 1px solid #eaeaea;
+  padding-left: 11px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #bcbcbc;
+}
+
+.collection-box__sort-det {
+  height: 100%;
+  width: 100%;
+}
+.collection-box__sort-det__summary {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #bcbcbc;
+  padding-left: 14px;
+  cursor: pointer;
+}
+.collection-box__sort-det__summary:hover {
+  color: #f16d7f;
+}
+.collection-box__sort-det__summary:hover .angle-down {
+  fill: #f16d7f;
+}
+.collection-box__sort-det__ul {
+  position: absolute;
+  z-index: 1;
+  width: 144px;
+  border: 1px solid #a8a3a3;
+  background-color: white;
+}
+.collection-box__sort-det__li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 11px;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #bcbcbc;
+  padding-left: 13px;
+}
+.collection-box__sort-det__li:hover {
+  color: #f16d7f;
+  cursor: pointer;
+}
+.collection-box__sort-by {
+  height: 35px;
+  width: 144px;
+  border: 1px solid #ebebeb;
+  display: flex;
+}
+.collection-box__summary-box {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.clr-block1 {
+  width: 12px;
+  height: 12px;
+  background-color: #ef5b70;
+}
+.clr-block2 {
+  width: 12px;
+  height: 12px;
+  background-color: Orange;
+}
+.clr-block3 {
+  width: 12px;
+  height: 12px;
+  background-color: Grey;
+}
+.clr-block4 {
+  width: 12px;
+  height: 12px;
+  background-color: Black;
+}
+.clr-block5 {
+  width: 12px;
+  height: 12px;
+  background-color: Blue;
+}
+
+.arrow_margin {
+  margin-right: 9px;
 }
 
 .collection-btn {
@@ -554,6 +663,39 @@ summary::marker {
   font-weight: 300;
   color: #b1b1b1;
   align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 18px;
+  padding-right: 12px;
+  width: 325px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  margin-bottom: 20px;
+  height: 45px;
+}
+.filling-form__sum {
+  position: relative;
+  cursor: pointer;
+}
+.filling-form__ul {
+  position: absolute;
+  z-index: 1;
+  width: 321px;
+  border: 1px solid #a8a3a3;
+  background-color: white;
+  padding: 17px 17px 5px;
+  top: 46px;
+}
+.filling-form__li {
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #b1b1b1;
+  padding-bottom: 10px;
+}
+.filling-form__li:hover {
+  color: #f16d7f;
 }
 .filling-form__discount {
   display: flex;
@@ -643,15 +785,28 @@ input::placeholder {
   margin-bottom: 20px;
   box-shadow: 2px -2px 20px 2px rgba(224, 220, 220, 0.51);
 }
+.product-box__item .angle-up {
+  display: none;
+}
 .product-box__item[open] {
   color: #f16d7f;
 }
+.product-box__item[open] .angle-down {
+  display: none;
+}
+.product-box__item[open] .angle-up {
+  display: block;
+  fill: #f16d7f;
+}
 .product-box__head {
+  display: flex;
+  justify-content: space-between;
   border-left: 6px solid #f16d7f;
   border-bottom: 1px solid #7a7a7a;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
+  padding-right: 6px;
 }
 .product-box__head:hover {
   color: #f16d7f;
@@ -678,12 +833,26 @@ input::placeholder {
   justify-content: space-between;
   margin-bottom: 40px;
 }
+.product-box__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
 .product-box__name {
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 20px;
   color: #6f6e6e;
   text-transform: uppercase;
+}
+.product-box__input-size {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #6f6e6e;
+  text-align: center;
+  padding-right: 35px;
 }
 .product-box__style-box {
   display: flex;
@@ -778,8 +947,8 @@ input::placeholder {
 .product-box__sort-det__summary:hover {
   color: #f16d7f;
 }
-.product-box__sort-det__summary:hover .summary-arrow {
-  color: #f16d7f;
+.product-box__sort-det__summary:hover .angle-down {
+  fill: #f16d7f;
 }
 .product-box__sort-det__ul {
   position: absolute;
@@ -806,7 +975,7 @@ input::placeholder {
   margin-left: 9px;
 }
 .product-box__sort-h4 {
-  padding: 8px 7px 9px 12px;
+  padding: 1px 7px 1px 12px;
   border-right: 1px solid #ebebeb;
   font-size: 14px;
   line-height: 26px;
@@ -819,6 +988,12 @@ input::placeholder {
 .product-box__text-h3 {
   font-size: 14px;
   line-height: 26px;
+  color: #6f6e6e;
+}
+.product-box__text-h4 {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
   color: #6f6e6e;
 }
 
@@ -848,6 +1023,19 @@ summary {
 
 summary::-webkit-details-marker {
   display: none;
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px 0 #222;
+  }
+}
+.scale-up {
+  animation: scale-up cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 * {
@@ -939,15 +1127,24 @@ body {
   border: none;
   background-color: #fff;
 }
+.header__search__btn2:hover {
+  color: #f16d7f;
+  background-color: #fbfbfb;
+  cursor: pointer;
+}
 .header__basketbutton {
   display: flex;
   align-items: flex-end;
   margin-right: 0px;
 }
 .header__basketbutton_basket {
-  width: 32px;
-  height: 29px;
+  width: 35px;
+  height: 32px;
   margin-right: 26px;
+}
+.header__basketbutton_basket:hover {
+  fill: #f16d7f;
+  cursor: pointer;
 }
 .header__basketbutton__btn {
   border-color: #f16d7f;
@@ -980,8 +1177,12 @@ body {
   text-decoration: none;
 }
 
-.fa-caret-down {
-  color: #a4a4a4;
+.angle-down {
+  fill: #a4a4a4;
+}
+
+.angle-up {
+  fill: #a4a4a4;
 }
 
 .basketbutton-box {
@@ -1067,9 +1268,17 @@ body {
   text-align: center;
   margin-bottom: 11px;
 }
+.box__link-btn:hover {
+  color: #fff;
+  background-color: #f16d7f;
+}
 .box__link-btn_clr {
   color: #4a4a4a;
   border: 1px solid #eaeaea;
+}
+.box__link-btn_clr:hover {
+  background-color: #4a4a4a;
+  color: white;
 }
 
 .brend-logo__logo_search {
@@ -1102,6 +1311,12 @@ body {
 .brend-logo__text-color {
   color: #f16d7f;
   font-weight: 900;
+}
+
+.brend_bgc {
+  background-color: #e8e8e8;
+  height: 614px;
+  margin-bottom: 98px;
 }
 
 .menu {
@@ -1217,7 +1432,10 @@ body {
 .mini__menu:hover {
   background-image: none;
 }
-.mini__menu:hover .fa-caret-down {
+.mini__menu:hover .angle-down {
+  fill: #f16d7f;
+}
+.mini__menu:hover .mini__search__btn {
   color: #f16d7f;
 }
 .mini__search {
@@ -1230,9 +1448,6 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #222222;
-}
-.mini__search__btn:hover {
-  color: #f16d7f;
 }
 .mini__box {
   display: flex;
@@ -1304,7 +1519,6 @@ body {
   background-image: url(./img/header/top_brend_man.jpg);
   background-position: bottom;
   height: 614px;
-  margin-bottom: 98px;
 }
 .brend__fig {
   border-left: 12px solid #f16d7f;
@@ -1343,9 +1557,15 @@ body {
   width: 560px;
   height: 542px;
 }
+.content__card:hover {
+  animation: scale-up 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s both;
+}
 .content__card-small {
   width: 560px;
   height: 261px;
+}
+.content__card-small:hover {
+  animation: scale-up 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s both;
 }
 .content__1 {
   background-image: url(./img/middle/middle_content_man_suit.png);

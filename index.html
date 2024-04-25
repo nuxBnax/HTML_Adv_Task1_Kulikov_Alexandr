@@ -32,7 +32,11 @@
                     <div class="mini__menu">
                         <details class="mini__search">
                             <summary class="mini__search__btn">Browse
-                                <i class="fa-solid fa-caret-down"></i>
+                                <svg class="angle-down" xmlns="http://www.w3.org/2000/svg" width="12px" height="12px"
+                                    viewBox="0 0 320 512">
+                                    <path
+                                        d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                                </svg>
                             </summary>
                             <div class="mini__box">
                                 <div class="mini__item">
@@ -67,14 +71,18 @@
                     <!-- ----------------Выпадающее мини-меню------------------------- -->
                     <form class="header__search__form" action="">
                         <input class="header__search__input" type="text" placeholder="Search for Item...">
-                        <button class="header__search__btn2"><img src="./img/header/magnifier.png"
-                                alt="magnifier"></button>
+                        <button class="header__search__btn2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </form>
                 </div>
             </div>
             <div class="header__basketbutton">
                 <div class="header__basket">
-                    <img class="header__basketbutton_basket" src="./img/header/basket.svg" alt="basket">
+                    <svg class="header__basketbutton_basket" xmlns="http://www.w3.org/2000/svg" fill="#222">
+                        <path
+                            d="M3.184 4.364h3.393l4.833 17.455c.138.512.611.867 1.144.867h14.855c.473 0 .887-.276 1.085-.71l5.405-12.411a1.195 1.195 0 0 0-.099-1.123 1.176 1.176 0 0 0-.986-.532H16.4c-.651 0-1.184.532-1.184 1.182 0 .65.533 1.182 1.184 1.182h14.598l-4.38 10.048H13.443L8.609 2.867A1.183 1.183 0 0 0 7.464 2h-4.28C2.533 2 2 2.532 2 3.182c0 .65.533 1.182 1.184 1.182ZM11.429 31a2.684 2.684 0 0 0 2.683-2.68 2.684 2.684 0 0 0-5.365 0A2.684 2.684 0 0 0 11.429 31Zm16.769 0h.197a2.678 2.678 0 0 0 1.835-.926c.473-.532.69-1.222.65-1.95-.098-1.458-1.38-2.581-2.86-2.483-1.48.099-2.584 1.399-2.485 2.857.098 1.399 1.262 2.502 2.663 2.502Z" />
+                    </svg>
                     <div class="basketbutton-box">
                         <a class="box__link" href="./single.html">
                             <div class="box__product">
@@ -105,7 +113,8 @@
                             <h2 class="box__text-h2">$500.00</h2>
                         </div>
                         <a class="box__link-btn" href="./checkout.html" class="box__link">Checkout</a>
-                        <a class="box__link-btn box__link-btn_clr" href="./shopping_cart.html" class="box__link2">Go to cart</a>
+                        <a class="box__link-btn box__link-btn_clr" href="./shopping_cart.html" class="box__link2">Go to
+                            cart</a>
                     </div>
                 </div>
                 <form action="">
@@ -383,17 +392,21 @@
                 </li>
             </ul>
         </section>
-        <section class="brend">
-            <figure class="brend__fig">
-                <h2 class="brend__text-h2">THE BRAND</h2>
-                <div>
-                    <h3 class="brend__text-h3">OF LUXERIOUS
-                        <span class="brend__text-main_color">FASHION</span>
-                    </h3>
-                </div>
-            </figure>
-        </section>
     </header>
+    <section class="brend_bgc">
+        <section class="container">
+            <section class="brend">
+                <figure class="brend__fig">
+                    <h2 class="brend__text-h2">THE BRAND</h2>
+                    <div>
+                        <h3 class="brend__text-h3">OF LUXERIOUS
+                            <span class="brend__text-main_color">FASHION</span>
+                        </h3>
+                    </div>
+                </figure>
+            </section>
+        </section>
+    </section>
     <section class="container-low">
         <section class="content">
             <div class="content__card content__1">

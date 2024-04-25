@@ -4,6 +4,21 @@
 @import 'shopping';
 @import 'product';
 
+@keyframes scale-up {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.03);
+        box-shadow: 0 0 10px 0 $mainTextColor;
+    }
+}
+
+.scale-up {
+    animation: scale-up cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -100,6 +115,11 @@ body {
             letter-spacing: 0.025em;
             border: none;
             background-color: #fff;
+            &:hover {
+                color: $mainColor;
+                background-color: $secondaryTextColor;
+                cursor: pointer;
+            }
         }
     }
 
@@ -109,9 +129,14 @@ body {
         margin-right: 0px;
 
         &_basket {
-            width: 32px;
-            height: 29px;
+            width: 35px;
+            height: 32px;
             margin-right: 26px;
+
+            &:hover {
+                fill: $mainColor;
+                cursor: pointer;
+            }
         }
 
         &__btn {
@@ -150,10 +175,12 @@ body {
     }
 }
 
-.fa-caret-down {
-    color: #a4a4a4;
+.angle-down {
+    fill: #a4a4a4;
 }
-
+.angle-up {
+    fill: #a4a4a4;
+}
 .basketbutton-box {
     display: none;
     flex-direction: column;
@@ -239,18 +266,27 @@ body {
         line-height: 1.2;
         font-weight: 700;
         text-transform: uppercase;
-        color: #f16d7f;
+        color: $mainColor;
         width: 225px;
         height: 50px;
-        border: 1px solid #f16d7f;
+        border: 1px solid $mainColor;
         align-content: center;
         text-align: center;
         margin-bottom: 11px;
 
+        &:hover {
+            color: #fff;
+            background-color: $mainColor;
+        }
+
         &_clr {
             color: #4a4a4a;
-            ;
             border: 1px solid #eaeaea;
+
+            &:hover {
+                background-color: #4a4a4a;
+                color: white;
+            }
         }
     }
 
@@ -293,6 +329,12 @@ body {
         color: $mainColor;
         font-weight: 900;
     }
+}
+
+.brend_bgc {
+    background-color: #e8e8e8;
+    height: 614px;
+    margin-bottom: 98px;
 }
 
 .menu {
@@ -424,10 +466,13 @@ body {
         cursor: pointer;
 
         &:hover {
-            background-image: none;   
+            background-image: none;
         }
 
-        &:hover .fa-caret-down {
+        &:hover .angle-down {
+            fill: $mainColor;
+        }
+        &:hover .mini__search__btn {
             color: $mainColor;
         }
     }
@@ -443,9 +488,7 @@ body {
         font-size: 14px;
         line-height: 20px;
         color: #222222;
-        &:hover {
-            color: $mainColor;
-        }
+
     }
 
     &__box {
@@ -527,7 +570,7 @@ body {
     background-image: url(./img/header/top_brend_man.jpg);
     background-position: bottom;
     height: 614px;
-    margin-bottom: 98px;
+
 
     &__fig {
         border-left: 12px solid $mainColor;
@@ -569,11 +612,18 @@ body {
     &__card {
         width: 560px;
         height: 542px;
+        &:hover {
+            animation: scale-up 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+        }
     }
+    
 
     &__card-small {
         width: 560px;
         height: 261px;
+        &:hover {
+            animation: scale-up 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+        }
     }
 
     &__1 {

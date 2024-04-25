@@ -16,17 +16,33 @@
         margin-bottom: 20px;
         box-shadow: 2px -2px 20px 2px rgba(224, 220, 220, 0.51);
 
+        & .angle-up {
+            display: none;
+        }
+
         &[open] {
             color: $mainColor;
+        }
+
+        &[open] .angle-down {
+            display: none;
+        }
+
+        &[open] .angle-up {
+            display: block;
+            fill: $mainColor;
         }
     }
 
     &__head {
+        display: flex;
+        justify-content: space-between;
         border-left: 6px solid $mainColor;
         border-bottom: 1px solid $footerColor;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 10px;
+        padding-right: 6px;
 
         &:hover {
             color: $mainColor;
@@ -60,12 +76,29 @@
         margin-bottom: 40px;
     }
 
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
     &__name {
         margin-bottom: 30px;
         font-size: 14px;
         line-height: 20px;
         color: #6f6e6e;
         text-transform: uppercase;
+
+    }
+
+    &__input-size {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #6f6e6e;
+        text-align: center;
+        padding-right: 35px;
     }
 
     &__style-box {
@@ -85,10 +118,12 @@
             border: none;
         }
     }
+
     &__box {
         display: flex;
         margin-bottom: 16px;
     }
+
     &__title {
         width: 240px;
         display: flex;
@@ -172,8 +207,8 @@
                     color: $mainColor;
                 }
 
-                &:hover .summary-arrow {
-                    color: $mainColor;
+                &:hover .angle-down {
+                    fill: $mainColor;
                 }
             }
 
@@ -208,7 +243,7 @@
         }
 
         &-h4 {
-            padding: 8px 7px 9px 12px;
+            padding: 1px 7px 1px 12px;
             border-right: 1px solid #ebebeb;
             font-size: 14px;
             line-height: 26px;
@@ -216,12 +251,21 @@
             color: #6f6e6e;
         }
     }
+
     &__price_margin {
         margin-bottom: 16px;
     }
+
     &__text-h3 {
         font-size: 14px;
         line-height: 26px;
+        color: #6f6e6e;
+    }
+
+    &__text-h4 {
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 400;
         color: #6f6e6e;
     }
 }

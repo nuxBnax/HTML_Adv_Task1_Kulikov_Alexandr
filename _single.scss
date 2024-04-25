@@ -27,6 +27,13 @@ summary::marker {
         width: 47px;
         height: 47px;
         background-color: rgba(42, 42, 42, 0.14);
+        &:hover {
+            background-color: $mainTextColor;
+            cursor: pointer;
+        }
+        &:hover .product__svg-lf{
+            fill: $mainColor;
+        }
     }
 
     &__svg-lf {
@@ -38,6 +45,13 @@ summary::marker {
         width: 47px;
         height: 47px;
         background-color: rgba(42, 42, 42, 0.14);
+        &:hover {
+            background-color: $mainTextColor;
+            cursor: pointer;
+        }
+        &:hover .product__svg-rt{
+            fill: $mainColor;
+        }
     }
 
     &__svg-rt {
@@ -120,6 +134,10 @@ summary::marker {
     &__text {
         color: #2f2f2f;
         margin-bottom: 16px;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #2f2f2f;
     }
 
     &__price {
@@ -140,7 +158,7 @@ summary::marker {
         margin-top: 63px;
         margin-bottom: 28px;
         display: flex;
-        gap: 53px;
+        justify-content: space-between;
     }
 
     &__summary {
@@ -155,11 +173,125 @@ summary::marker {
     }
 
     &__input {
-        width: 144px;
+        width: 133px;
         height: 35px;
         background-color: #ffffff;
         border: 1px solid #eaeaea;
+        padding-left: 11px;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #bcbcbc;
     }
+}
+
+.collection-box {
+
+    &__sort {
+
+        &-det {
+            height: 100%;
+            width: 100%;
+
+            &__summary {
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 13px;
+                line-height: 24px;
+                font-weight: 400;
+                color: #bcbcbc;
+                padding-left: 14px;
+                cursor: pointer;
+
+                &:hover {
+                    color: $mainColor;
+                }
+
+                &:hover .angle-down {
+                    fill: $mainColor;
+                }
+            }
+
+            &__ul {
+                position: absolute;
+                z-index: 1;
+                width: 144px;
+                border: 1px solid #a8a3a3;
+                background-color: white;
+            }
+
+            &__li {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 11px;
+                font-size: 13px;
+                line-height: 24px;
+                font-weight: 400;
+                color: #bcbcbc;
+                padding-left: 13px;
+
+                &:hover {
+                    color: $mainColor;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &-by {
+            height: 35px;
+            width: 144px;
+            border: 1px solid #ebebeb;
+            display: flex;
+
+        }
+
+    }
+
+    &__summary-box {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+    }
+}
+
+.clr-block {
+    &1 {
+        width: 12px;
+        height: 12px;
+        background-color: #ef5b70;
+    }
+
+    &2 {
+        width: 12px;
+        height: 12px;
+        background-color: Orange;
+    }
+
+    &3 {
+        width: 12px;
+        height: 12px;
+        background-color: Grey;
+    }
+
+    &4 {
+        width: 12px;
+        height: 12px;
+        background-color: Black;
+    }
+
+    &5 {
+        width: 12px;
+        height: 12px;
+        background-color: Blue;
+    }
+
+}
+
+.arrow_margin {
+    margin-right: 9px;
 }
 
 .collection-btn {
@@ -202,7 +334,6 @@ summary::marker {
     }
 }
 
-
 .title {
     display: flex;
     flex-direction: column;
@@ -217,7 +348,6 @@ summary::marker {
         color: #4d4d4d;
     }
 }
-
 
 .bg-image {
     background-image: url(img/footer/serfer_lg.png);

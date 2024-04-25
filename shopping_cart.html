@@ -32,7 +32,11 @@
                     <div class="mini__menu">
                         <details class="mini__search">
                             <summary class="mini__search__btn">Browse
-                                <i class="fa-solid fa-caret-down"></i>
+                                <svg class="angle-down" xmlns="http://www.w3.org/2000/svg" width="12px" height="12px"
+                                    viewBox="0 0 320 512">
+                                    <path
+                                        d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                                </svg>
                             </summary>
                             <div class="mini__box">
                                 <div class="mini__item">
@@ -66,8 +70,9 @@
                     </div>
                     <form class="header__search__form" action="">
                         <input class="header__search__input" type="text" placeholder="Search for Item...">
-                        <button class="header__search__btn2"><img src="./img/header/magnifier.png"
-                                alt="magnifier"></button>
+                        <button class="header__search__btn2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -75,7 +80,7 @@
                 <div class="header__basket">
                     <img class="header__basketbutton_basket" src="./img/header/basket.svg" alt="basket">
                     <div class="basketbutton-box">
-                        <a class="box__link" href="######">
+                        <a class="box__link" href="./single.html">
                             <div class="box__product">
                                 <img class="box__img" src="./img/header/header_box_man.jpg" alt="">
                                 <div class="box__mini">
@@ -87,7 +92,7 @@
                             </div>
                         </a>
                         <div class="box__line"></div>
-                        <a class="box__link" href="######">
+                        <a class="box__link" href="./single.html">
                             <div class="box__product">
                                 <img class="box__img" src="./img/header/header_box_girl.jpg" alt="">
                                 <div class="box__mini">
@@ -104,7 +109,8 @@
                             <h2 class="box__text-h2">$500.00</h2>
                         </div>
                         <a class="box__link-btn" href="./checkout.html" class="box__link">Checkout</a>
-                        <a class="box__link-btn box__link-btn_clr" href="./shopping_cart.html" class="box__link2">Go to cart</a>
+                        <a class="box__link-btn box__link-btn_clr" href="./shopping_cart.html" class="box__link2">Go to
+                            cart</a>
                     </div>
                 </div>
                 <form action="">
@@ -412,20 +418,20 @@
             </div>
             <div class="shopping__product">
                 <div class="shopping__card">
-                    <img src="./img/shopping/shop_man_coat.jpg">
+                    <a href="./single.html">
+                        <img src="./img/shopping/shop_man_coat.jpg">
+                    </a>
                     <div class="card__details">
                         <h2 class="card__title">Mango People T-shirt</h2>
                         <h3 class="card__parametr">Color: <span class="card__span">Red</span></h3>
                         <h3 class="card__parametr">Size: <span class="card__span">Xll</span></h3>
-                    </div>	
+                    </div>
                 </div>
                 <div class="shopping__card-tbl">
                     <h3 class="card__parametr">$150</h3>
                 </div>
                 <div class="shopping__card-tbl">
-                    <div class="shopping__card__quantity">
-                        <h3 class="card__parametr">2</h3>
-                    </div>
+                    <input class="shopping__card__quantity" type="number" min="1" placeholder="2">
                 </div>
                 <div class="shopping__card-tbl">
                     <h3 class="card__parametr">FREE</h3>
@@ -434,25 +440,25 @@
                     <h3 class="card__parametr">$300</h3>
                 </div>
                 <div class="shopping__card-tbl">
-                    <img src="./img/shopping/shop_close.jpg">
+                    <a href="#"><img src="./img/shopping/shop_close.jpg"></a>
                 </div>
             </div>
             <div class="shopping__product">
                 <div class="shopping__card">
-                    <img src="./img/shopping/shop_man_brown_coat.png">
+                    <a href="./single.html">
+                        <img src="./img/shopping/shop_man_brown_coat.png">
+                    </a>
                     <div class="card__details">
                         <h2 class="card__title">Mango People T-shirt</h2>
                         <h3 class="card__parametr">Color: <span class="card__span">Red</span></h3>
                         <h3 class="card__parametr">Size: <span class="card__span">Xll</span></h3>
-                    </div>	
+                    </div>
                 </div>
                 <div class="shopping__card-tbl">
                     <h3 class="card__parametr">$150</h3>
                 </div>
                 <div class="shopping__card-tbl">
-                    <div class="shopping__card__quantity">
-                        <h3 class="card__parametr">2</h3>
-                    </div>
+                    <input class="shopping__card__quantity" type="number" min="1" placeholder="2">
                 </div>
                 <div class="shopping__card-tbl">
                     <h3 class="card__parametr">FREE</h3>
@@ -461,25 +467,25 @@
                     <h3 class="card__parametr">$300</h3>
                 </div>
                 <div class="shopping__card-tbl">
-                    <img src="./img/shopping/shop_close.jpg">
+                    <a href="#"><img src="./img/shopping/shop_close.jpg"></a>
                 </div>
             </div>
             <div class="shopping__product">
                 <div class="shopping__card">
-                    <img src="./img/shopping/shop_man_jacket.jpg">
+                    <a href="./single.html">
+                        <img src="./img/shopping/shop_man_jacket.jpg">
+                    </a>
                     <div class="card__details">
                         <h2 class="card__title">Mango People T-shirt</h2>
                         <h3 class="card__parametr">Color: <span class="card__span">Red</span></h3>
                         <h3 class="card__parametr">Size: <span class="card__span">Xll</span></h3>
-                    </div>	
+                    </div>
                 </div>
                 <div class="shopping__card-tbl">
                     <h3 class="card__parametr">$150</h3>
                 </div>
                 <div class="shopping__card-tbl">
-                    <div class="shopping__card__quantity">
-                        <h3 class="card__parametr">2</h3>
-                    </div>
+                    <input class="shopping__card__quantity" type="number" min="1" placeholder="2">
                 </div>
                 <div class="shopping__card-tbl">
                     <h3 class="card__parametr">FREE</h3>
@@ -488,10 +494,10 @@
                     <h3 class="card__parametr">$300</h3>
                 </div>
                 <div class="shopping__card-tbl">
-                    <img src="./img/shopping/shop_close.jpg">
+                    <a href="#"><img src="./img/shopping/shop_close.jpg"></a>
                 </div>
             </div>
-            
+
         </section>
         <section class="action-btns">
             <button class="action-btn">Clear shopping cart</button>
@@ -501,13 +507,19 @@
         <section class="filling-form">
             <form class="filling-form__adress">
                 <h2 class="filling-form__text-h2">Shipping Adress</h2>
-                <details>
-                    <summary class="filling-form__summary filling-form__box">Bangladesh<img class="filling-form__img" src="./img/shopping/shop_arrow_down.jpg" alt=""></summary>
-                    <ul>
-                        <li>Moskow</li>
-                        <li>New York</li>
-                        <li>London</li>
-                        <li>Los Angeles</li>
+                <details class="filling-form__sum">
+                    <summary class="filling-form__summary">Bangladesh
+                        <svg class="angle-down" xmlns="http://www.w3.org/2000/svg" width="12px" height="12px"
+                            viewBox="0 0 320 512">
+                            <path
+                                d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                        </svg>
+                    </summary>
+                    <ul class="filling-form__ul">
+                        <li class="filling-form__li">Moskow</li>
+                        <li class="filling-form__li">New York</li>
+                        <li class="filling-form__li">London</li>
+                        <li class="filling-form__li">Los Angeles</li>
                     </ul>
                 </details>
                 <input class="filling-form__box" type="text" name="" placeholder="State">
