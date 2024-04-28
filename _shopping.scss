@@ -54,10 +54,12 @@
         &__quantity {
             width: 54px;
             height: 30px;
-            align-content: center;
             text-align: center;
             background-color: #ffffff;
             border: 1px solid #eaeaea;
+            &::placeholder {
+                padding-left: 14px;
+            }
         }
     }
 
@@ -119,6 +121,7 @@
     }
 }
 
+
 .filling-form {
     display: flex;
     margin-bottom: 79px;
@@ -129,6 +132,7 @@
         align-items: flex-start;
         margin-right: 35px;
         width: 355px;
+        
     }
 
     &__text-h2 {
@@ -179,8 +183,9 @@
         border: 1px solid #eaeaea;
         margin-bottom: 20px;
         height: 45px;
-        
+
     }
+
     &__sum {
         position: relative;
         cursor: pointer;
@@ -196,12 +201,14 @@
         top: 46px;
 
     }
+
     &__li {
         font-size: 13px;
         line-height: 1.2;
         font-weight: 300;
         color: #b1b1b1;
         padding-bottom: 10px;
+
         &:hover {
             color: $mainColor;
         }
@@ -226,12 +233,13 @@
     }
 
     &__box {
-        width: 355px;
+        width: 325px;
         height: 45px;
         background-color: #ffffff;
         border: 1px solid #eaeaea;
         margin-bottom: 20px;
-
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
     &__line {
@@ -274,7 +282,6 @@ input::placeholder {
     line-height: 1.2;
     font-weight: 300;
     color: #b1b1b1;
-    padding-left: 18px;
 }
 
 .bg-image {

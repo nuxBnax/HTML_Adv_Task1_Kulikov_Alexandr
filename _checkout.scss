@@ -1,10 +1,5 @@
 @import 'vars';
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .bgc-breadcrumbs {
     background-color: #f8f3f4;
 }
@@ -68,7 +63,7 @@
 
     &__title {
         font-size: 16px;
-        line-height: 1.2;
+        line-height: 6;
         font-weight: 700;
         text-transform: uppercase;
         color: $mainTextColor;
@@ -199,7 +194,7 @@
         height: 50px;
         background: none;
         border: 1px solid #eaeaea;
-        margin-bottom: 48px;
+        margin-bottom: 79px;
         cursor: pointer;
 
         &:hover {
@@ -225,8 +220,8 @@
     }
 
     &__line {
-        margin-top: 31px;
-        margin-bottom: 31px;
+        // margin-top: 31px;
+        // margin-bottom: 31px;
         width: 1140px;
         height: 1px;
         background-color: #e8e8e8;
