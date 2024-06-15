@@ -1,0 +1,74 @@
+[
+    { 
+    "id": 1,
+    "cardLink": "./single.html",
+    "img" : "./img/middle/card_product1.jpg",
+    "addLink" : "22222",
+    "title" : "WHITE T-SHIRT",
+    "price" : "$52.00",
+    "btnText" : "Add to Cart"
+    },
+    { 
+    "id": 2,
+    "cardLink": "./single.html",
+    "img" : "./img/middle/card_product2.jpg",
+    "addLink" : "22222",
+    "title" : "RED BLOUSE",
+    "price" : "$31.00",
+    "btnText" : "Add to Cart"
+    },
+    { 
+    "id": 3,
+    "cardLink": "./single.html",
+    "img" : "./img/middle/card_product3.jpg",
+    "addLink" : "22222",
+    "title" : "BLUE JACKET",
+    "price" : "$73.00",
+    "btnText" : "Add to Cart"
+    },
+    { 
+    "id": 4,
+    "cardLink": "./single.html",
+    "img" : "./img/middle/card_product4.jpg",
+    "addLink" : "22222",
+    "title" : "FLOWER DRESS",
+    "price" : "$88.00",
+    "btnText" : "Add to Cart"
+    },
+    { 
+    "id": 5,
+    "cardLink": "./single.html",
+    "img" : "./img/middle/card_product5.jpg",
+    "addLink" : "22222",
+    "title" : "STRIPED DRESS",
+    "price" : "$120.00",
+    "btnText" : "Add to Cart"
+    },
+    { 
+    "id": 6,
+    "cardLink": "./single.html",
+    "img" : "./img/middle/card_product6.jpg",
+    "addLink" : "22222",
+    "title" : "SILVER-GREY SUIT",
+    "price" : "$21.00",
+    "btnText" : "Add to Cart"
+    },
+    { 
+    "id": 7,
+    "cardLink": "./single.html",
+    "img" : "./img/middle/card_product7.jpg",
+    "addLink" : "22222",
+    "title" : "BEIGE BREECHES",
+    "price" : "$85.00",
+    "btnText" : "Add to Cart"
+    },
+    { 
+    "id": 8,
+    "cardLink": "./single.html",
+    "img" : "./img/middle/card_product8.jpg",
+    "addLink" : "22222",
+    "title" : "BLUE SWEATSHIRT",
+    "price" : "$63.00",
+    "btnText" : "Add to Cart"
+    }
+]
