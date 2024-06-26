@@ -5,7 +5,10 @@
     "img" : "./img/middle/card_product1.jpg",
     "addLink" : "22222",
     "title" : "WHITE T-SHIRT",
-    "price" : "$52.00",
+    "price" : 52.2,
+    "shipping" : 15,
+    "color" : "White",
+    "size" : ["S","M","L","X","XL"],
     "btnText" : "Add to Cart"
     },
     { 
@@ -14,7 +17,10 @@
     "img" : "./img/middle/card_product2.jpg",
     "addLink" : "22222",
     "title" : "RED BLOUSE",
-    "price" : "$31.00",
+    "price" : 31,
+    "shipping" : 5,
+    "color" : "Red",
+    "size" : ["S","M","L"],
     "btnText" : "Add to Cart"
     },
     { 
@@ -23,7 +29,10 @@
     "img" : "./img/middle/card_product3.jpg",
     "addLink" : "22222",
     "title" : "BLUE JACKET",
-    "price" : "$73.00",
+    "price" : 73.00,
+    "shipping" : 12,
+    "color" : "Blue",
+    "size" : ["XL","X","L"],
     "btnText" : "Add to Cart"
     },
     { 
@@ -32,7 +41,10 @@
     "img" : "./img/middle/card_product4.jpg",
     "addLink" : "22222",
     "title" : "FLOWER DRESS",
-    "price" : "$88.00",
+    "price" : 88.00,
+    "shipping" : 11,
+    "color" : "White",
+    "size" : ["S","M","L","X","XL"],
     "btnText" : "Add to Cart"
     },
     { 
@@ -41,7 +53,10 @@
     "img" : "./img/middle/card_product5.jpg",
     "addLink" : "22222",
     "title" : "STRIPED DRESS",
-    "price" : "$120.00",
+    "price" : 120.00,
+    "shipping" : 0,
+    "color" : "White-Black",
+    "size" : ["S","M"],
     "btnText" : "Add to Cart"
     },
     { 
@@ -50,7 +65,10 @@
     "img" : "./img/middle/card_product6.jpg",
     "addLink" : "22222",
     "title" : "SILVER-GREY SUIT",
-    "price" : "$21.00",
+    "price" : 21.00,
+    "shipping" : 0,
+    "color" : "Grey",
+    "size" : ["S","M","L"],
     "btnText" : "Add to Cart"
     },
     { 
@@ -59,7 +77,10 @@
     "img" : "./img/middle/card_product7.jpg",
     "addLink" : "22222",
     "title" : "BEIGE BREECHES",
-    "price" : "$85.00",
+    "price" : 85.00,
+    "shipping" : 0,
+    "color" : "Beige",
+    "size" : ["L","X"],
     "btnText" : "Add to Cart"
     },
     { 
@@ -68,7 +89,10 @@
     "img" : "./img/middle/card_product8.jpg",
     "addLink" : "22222",
     "title" : "BLUE SWEATSHIRT",
-    "price" : "$63.00",
+    "price" : 63.00,
+    "shipping" : 23,
+    "color" : "Blue",
+    "size" : "L",
     "btnText" : "Add to Cart"
     }
 ]

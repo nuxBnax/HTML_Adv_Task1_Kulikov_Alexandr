@@ -569,6 +569,10 @@ summary::marker {
 .shopping__card__quantity::placeholder {
   padding-left: 14px;
 }
+.shopping__img {
+  width: 100px;
+  height: 115px;
+}
 
 .action-btns {
   display: flex;
@@ -1143,6 +1147,7 @@ body {
   display: flex;
   align-items: flex-end;
   margin-right: 0px;
+  position: relative;
 }
 .header__basketbutton_basket {
   width: 35px;
@@ -1199,9 +1204,11 @@ body {
   position: absolute;
   background-color: #fff;
   width: 262px;
-  height: 440px;
   border-radius: 5px;
   padding-top: 21px;
+  padding-bottom: 20px;
+  z-index: 2;
+  border: 1px solid #f16d7f;
 }
 
 .box {
@@ -1237,6 +1244,10 @@ body {
   flex-direction: column;
   gap: 5px;
 }
+.box__img {
+  width: 72px;
+  height: 85px;
+}
 .box__img2 {
   width: 15px;
   height: 15px;
@@ -1259,6 +1270,9 @@ body {
 .box__delete_btn {
   border: none;
   background-color: #fff;
+}
+.box__delete_btn:hover {
+  opacity: 0.3;
 }
 .box__line {
   width: 229px;
@@ -1291,6 +1305,25 @@ body {
 .box__link-btn_clr:hover {
   background-color: #4a4a4a;
   color: white;
+}
+.box__product-cnt {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: #f16d7f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  right: 145px;
+}
+.box__count {
+  font-size: 11px;
+}
+
+.d-none {
+  display: none;
 }
 
 .brend-logo__logo_search {

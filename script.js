@@ -1,5 +1,6 @@
-const url1 = "./data.json";
+import { showProductQuantity,  deleteProductFromCart, productInCart, preResultSum } from "./others.js";
 
+const url1 = "./data.json";
 async function fetchData(url) {
     try {
         const responce = await fetch(url);
@@ -9,25 +10,24 @@ async function fetchData(url) {
         console.log(error.message);
     }
 }
-
+console.log('script до асинх функции');
 document.addEventListener("DOMContentLoaded", async () => {
     const data = await fetchData(url1);
 
-    const containerEl = document.querySelector('.cards')
-
-    data.forEach(item => {
-
-        containerEl.insertAdjacentHTML("beforeend", `
+    function displayProducts() {
+        const containerEl = document.querySelector('.cards')
+        data.forEach(item => {
+            containerEl.insertAdjacentHTML("beforeend", `
         <div class="cards__block">
         <a class="cards__link" href="${item.cardLink}">
             <img class="cards__img" src="${item.img}" alt="product">
             <div class="cards__text">
                 <p class="cards__text-discription">${item.title}</p>
-                <p class="cards__text-price">${item.price}</p>
+                <p class="cards__text-price">&#36 ${item.price}</p>
             </div>
         </a>
         <div class="add-box">
-            <a class="add" href="${item.addLink}">
+            <a id="${item.id}" class="add" href="${item.addLink}">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px"
                     height="22px" viewBox="0 0 36 32" fill="#fff">
                     <path fill-rule="evenodd"
@@ -38,6 +38,125 @@ document.addEventListener("DOMContentLoaded", async () => {
         </div>
     </div>
 `)
+        });
+    }
+    displayProducts();
 
-    });
+    function buyProduct() {
+        const addEl = document.querySelectorAll('.add');
+        addEl.forEach(item => {
+            data.forEach(elem => {
+                const productId = Number(item.getAttribute("id"));
+                if (productId === elem.id) {
+                    item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    let productInfo = {
+                        id: elem.id,
+                        quantity: 1,
+                        img: elem.img,
+                        title: elem.title,
+                        price: elem.price,
+                        shipping:elem.shipping,
+                        color: elem.color,
+                        size: elem.size,
+                    };
+                    localStorage.setItem(productId, JSON.stringify(productInfo))
+                    console.log(productId + " Выбраны товары");
+                    window.location.reload();
+                });
+                }
+                
+            });
+        });
+    }
+    buyProduct();
+
+    // function productInCart() {
+    //     const basketEl = document.querySelector('.basketbutton-box')
+
+    //     data.forEach(el => {
+    //         const product = JSON.parse(localStorage.getItem(el.id));
+    //         console.log(Number(product.id) + ' productInCart ');
+    //         if (el.id === Number(product.id)) {
+    //             basketEl.insertAdjacentHTML("afterbegin", `
+    //         <a class="box__link" href="./single.html">
+    //             <div class="box__product">
+    //                 <img class="box__img" src="${el.img}" alt="">
+    //                 <div class="box__mini">
+    //                      <h4 class="box__product__name">${el.title}</h4>
+    //                      <img src="./img/header/header_box_stars.jpg" alt="">
+    //                      <h4 class="box__name__quantity">1 x &#36 ${el.price}</h4>
+    //                 </div>
+    //                 <form action="delete_item">
+    //                     <button id="${el.id}" class="box__delete_btn">
+    //                         <img class="box__img2" src="./img/header/header_box_close.png" alt="close">
+    //                     </button>
+    //                 </form>
+    //             </div>
+    //         </a>
+    //         <div class="box__line"></div>
+    //         `)
+    //         }
+    //     });
+    //     console.log('Отображаю содержимое корзины наверху');
+    // }
+    // productInCart();
+
+
+
+    // function showProductQuantity() {
+    //         const containerForCounter = document.querySelector('.box__product-cnt');
+    //         const productCounter = document.querySelector('.box__count');
+    //         if (localStorage.length === 0) {
+    //             containerForCounter.classList.add("d-none");;
+    //         } else if (localStorage.length > 0) {
+    //             productCounter.textContent = localStorage.length;
+    //         }
+    //     }
+    // showProductQuantity();
+
+    console.log('script внутри асинх функции');
+    // function deleteProductFromCart() {
+    //     const closeBtns = document.querySelectorAll('.box__delete_btn');
+    //     closeBtns.forEach(el => {
+    //         el.addEventListener('click', (e) => {
+    //             e.preventDefault();
+    //             const productId = el.getAttribute("id");
+    //             localStorage.removeItem(productId);
+    //             console.log(productId);
+    //             // alert(`Товар ${el.id} был удален из корзины`);    
+    //             window.location.reload();
+    //         });
+    //     });
+    // }
+    deleteProductFromCart();
 });
+productInCart();
+
+// function showProductQuantity() {
+//     const containerForCounter = document.querySelector('.box__product-cnt');
+//     const productCounter = document.querySelector('.box__count');
+//     if (localStorage.length === 0) {
+//         containerForCounter.classList.add("d-none");;
+//     } else if (localStorage.length > 0) {
+//         productCounter.textContent = localStorage.length;
+//     }
+// }
+showProductQuantity();
+
+// function showEmptyCart() {
+//     const basketEl = document.querySelector('.basketbutton-box')
+//     if (localStorage.length === 0) {
+//         basketEl.insertAdjacentHTML("afterbegin", `
+//     <h4 class="box__product__name"> ! Your cart is Empty!</h4>
+//     <br>
+//     <div class="box__line"></div>
+//     `)
+//     }
+// }
+// showEmptyCart();
+
+preResultSum();
+console.log('script после асинх функции');
+
