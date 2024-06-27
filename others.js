@@ -23,7 +23,7 @@
 // }
 
 export function productInCart() {
-    const basketEl = document.querySelector('.basketbutton-box')
+    const basketEl = document.querySelector('.basketbutton-scroll')
 
     for (let i = 0; i < localStorage.length; i++) {
         const item = localStorage.key(i);
@@ -150,6 +150,7 @@ export function showProductQuantity() {
         productCounter.textContent = localStorage.length;
     }
 }
+
 export function productQauntityCatch() {
     const productQuantity = document.querySelectorAll('.shopping__card__quantity');
     productQuantity.forEach(elem => {
@@ -173,6 +174,7 @@ export function productQauntityCatch() {
     });
 
 }
+
 export function deleteProductFromShoppingCart() {
     const closeBtns = document.querySelectorAll('.delete_btn');
     closeBtns.forEach(el => {
@@ -183,4 +185,14 @@ export function deleteProductFromShoppingCart() {
             window.location.reload();
         });
     });
+}
+
+export function blockScroll() {
+    const boxEl = document.querySelector('.basketbutton-scroll');
+    if (localStorage.length > 3) {
+        boxEl.style.height = "300px";
+        boxEl.style.overflowY = "scroll";
+        boxEl.style.scrollbarColor = "#f16d7f #fbfbfb";
+        boxEl.style.scrollbarWidth = "thin";
+    }
 }

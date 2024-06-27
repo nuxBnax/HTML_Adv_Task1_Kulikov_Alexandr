@@ -1,4 +1,4 @@
-import { showProductQuantity, deleteProductFromCart, productInCart, preResultSum } from "./others.js";
+import { showProductQuantity, deleteProductFromCart, productInCart, preResultSum, blockScroll } from "./others.js";
 // const url1 = "./data.json";
 
 // async function fetchData(url) {
@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 });
     productInCart();
+    blockScroll();
     preResultSum();
     showProductQuantity();
     

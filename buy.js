@@ -1,5 +1,5 @@
 
-import { showProductQuantity, productInCart, deleteProductFromCart, preResultSum, displayShoppingCart, productQauntityCatch, deleteProductFromShoppingCart, subTotal, grandTotal } from "./others.js";
+import { showProductQuantity, productInCart, deleteProductFromCart, preResultSum, displayShoppingCart, productQauntityCatch, deleteProductFromShoppingCart, subTotal, grandTotal,blockScroll } from "./others.js";
 const url1 = "./data.json";
 async function fetchData(url) {
     try {
@@ -112,6 +112,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // }
 
     displayShoppingCart();
+    
     productQauntityCatch();
     // function preResultSum() {
     //     const totalSumEl = document.querySelector('.sum');
@@ -129,6 +130,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 });
 productInCart();
+blockScroll();
 deleteProductFromCart();
 // function showProductQuantity() {
 //     const containerForCounter = document.querySelector('.box__product-cnt');

@@ -1222,7 +1222,7 @@ body {
 .box__product {
   display: flex;
   align-items: center;
-  gap: 30px;
+  justify-content: space-between;
 }
 .box__product__name {
   font-size: 12px;
