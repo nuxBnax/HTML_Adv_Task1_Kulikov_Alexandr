@@ -1,33 +1,8 @@
-
-// export function buyProduct() {
-//     const addEl = document.querySelectorAll('.add');
-//     addEl.forEach(item => {
-//         item.addEventListener('click', (e) => {
-//             e.preventDefault();
-//             const productId = Number(item.getAttribute("id"));
-//             let productInfo = {
-//                 id: productId,
-//                 quantity: 1,
-//                 img: "./img/middle/card_product5.jpg",
-//                 title: "STRIPED DRESS",
-//                 price: 120.00,
-//                 shipping: 0,
-//                 color: "White-Black",
-//                 size: ["S", "M"],
-//             };
-//             localStorage.setItem(productId, JSON.stringify(productInfo))
-//             console.log(productId + " Выбраны товары");
-//             window.location.reload();
-//         });
-//     });
-// }
-
 export function productInCart() {
     const basketEl = document.querySelector('.basketbutton-scroll')
 
     for (let i = 0; i < localStorage.length; i++) {
         const item = localStorage.key(i);
-        // console.log(item);
         const product = JSON.parse(localStorage.getItem(item));
         console.log(product.id + ' товар добавлен в корзину вверху');
 
